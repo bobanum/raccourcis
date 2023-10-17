@@ -1,0 +1,223 @@
+@charset "UTF-8";
+@import 'polices/professional-business.css';
+@import url("https://cdn.jsdelivr.net/gh/bobanum/page@v0.0.2/css/font-themes/corporate.css");
+:root {
+  --h: 240;
+  --s: 0%;
+  --l: 50%;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+body {
+  height: 100%;
+}
+
+h1,
+h3,
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2,
+h4,
+th,
+legend,
+caption,
+label,
+figcaption,
+.subheading {
+  font-family: var(--font-subheading);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#interface, .interface {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+#interface > header, #interface > footer, .interface > header, .interface > footer {
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h), var(--s), 30%);
+  color: hsl(var(--h), var(--s), 100%);
+  display: flex;
+  justify-content: space-between;
+}
+#interface > header, .interface > header {
+  order: -1000;
+}
+#interface > nav, .interface > nav {
+  background-color: hsl(var(--h), var(--s), 35%);
+  color: hsl(var(--h), var(--s), 100%);
+}
+#interface > footer, .interface > footer {
+  order: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  display: flex;
+}
+nav ul li a {
+  flex-grow: 1;
+  display: flex;
+  padding: 6px 12px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  background: #333;
+  color: #fff;
+}
+
+#app {
+  padding: 1em;
+}
+
+.flap {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto 0.7em;
+  gap: 0.25em;
+}
+
+section {
+  font-size: 9pt;
+  line-height: 1;
+  display: grid;
+  border: 1px solid #999;
+  border-radius: 0.25em;
+  overflow: hidden;
+  grid-template-rows: min-content 1fr;
+}
+section h1 {
+  font-size: 0.8em;
+  padding: 0.1em 0.25em 0.2em;
+  background-color: #999;
+  color: #fff;
+}
+
+.raccourcis {
+  display: grid;
+}
+.raccourcis > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.25em;
+  gap: 0.5em;
+  line-height: 0.9;
+}
+.raccourcis > *:nth-child(even) {
+  background-color: hsl(0, 0%, 90%);
+}
+.raccourcis .touche {
+  font-weight: smaller;
+}
+.raccourcis .touche samp {
+  font-weight: bold;
+}
+.raccourcis .touche > *:not(:first-child, span)::before {
+  content: "+";
+  display: none;
+}
+.raccourcis .groupe {
+  display: flex;
+  gap: 0.5em;
+  grid-column: 2;
+  order: 1;
+  align-items: end;
+}
+.raccourcis .chord,
+.raccourcis .touche {
+  display: flex;
+  align-items: center;
+}
+.raccourcis .chord + .touche::before,
+.raccourcis .touche + .touche::before {
+  content: "…";
+}
+.raccourcis span {
+  grid-column: 1;
+  order: 0;
+}
+.raccourcis .liste {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.general {
+  grid-column: 1;
+  grid-row: 1/span 2;
+}
+
+.vscode {
+  grid-column: 3;
+  grid-row: 1/span 3;
+}
+
+.legende {
+  grid-column: 1/3;
+  display: flex;
+  align-items: end;
+  border: none;
+  gap: 1em;
+  justify-self: center;
+}
+.legende div {
+  display: flex;
+  gap: 0.25em;
+  align-items: center;
+}
+
+.fureteur {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+kbd {
+  display: flex;
+  font-size: 0.8em;
+}
+kbd::after {
+  content: "";
+  background-size: 100% 100%;
+  width: 1em;
+  height: 1em;
+}
+kbd.META::after {
+  background-image: url("../img/touches.svg#windows");
+}
+kbd.SHIFT::after {
+  background-image: url("../img/touches.svg#shift");
+}
+kbd.CTRL::after {
+  background-image: url("../img/touches.svg#ctrl");
+}
+kbd.CMD::after {
+  background-image: url("../img/touches.svg#cmd");
+}
+kbd.ALT::after {
+  background-image: url("../img/touches.svg#alt");
+}

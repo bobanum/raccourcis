@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="./css/style.css" />
+	<script type="module">
+		import App from "./src/App.js";
+		import Page from "https://cdn.jsdelivr.net/gh/bobanum/page@v0.0.2/src/Page.js";
+		Page.main({
+			orientation: "portrait",
+			format: "a4",
+			margin: ".125in",
+			rows: 4,
+			columns: 2,
+		});
+		App.main();
+	</script>
+	<title>Raccourcis</title>
+</head>
+
+<body>
+	<div class="flap">
+		<section class="general">
+			<h1>Général</h1>
+			<div class="raccourcis">
+				<div data-raccourci="ctrl+c">Copier</div>
+				<div data-raccourci="ctrl+x">Couper</div>
+				<div data-raccourci="ctrl+v">Coller</div>
+				<div data-raccourci="ctrl+w">Fermer</div>
+				<div data-raccourci="ctrl+z">Annuler</div>
+				<div data-raccourci="ctrl+shift+z">Rétablir</div>
+				<div data-raccourci="ctrl+f">Recherche</div>
+				<div data-raccourci="alt+f4">Quitter</div>
+				<div data-raccourci="ctrl+a">Sélect. tout</div>
+				<div data-raccourci="ctrl+s">Sauvegarder</div>
+				<div data-raccourci="f2">Renommer</div>
+				<div data-raccourci="meta+shift+s">Saisie d'écran</div>
+			</div>
+		</section>
+		<section class="windows">
+			<h1>Windows</h1>
+			<div class="raccourcis">
+				<div data-raccourci="alt+tab">Fenêtre suivante</div>
+				<div data-raccourci="meta+l">Verrouiller</div>
+				<div data-raccourci="meta+e">Explorateur</div>
+				<div data-raccourci="meta+d">Bureau</div>
+				<div data-raccourci="ctrl+shift+esc">Gestionnaire de&nbsp;tâches</div>
+				<div data-raccourci="meta+v">Presses-papiers</div>
+				<div data-raccourci="meta+flèche">Réorganiser</div>
+			</div>
+		</section>
+		<section class="fureteur">
+			<h1>Chrome/Edge/Firefox</h1>
+			<div class="raccourcis">
+				<div data-raccourci="f5|ctrl+r">Recharger</div>
+				<div data-raccourci="f12">Console</div>
+				<div data-raccourci="ctrl+shift+t">Réouvrir onglet</div>
+				<div data-raccourci="ctrl+--|ctrl+-">Zoom</div>
+			</div>
+		</section>
+		<section class="vscode">
+			<h1>VS Code</h1>
+			<div class="raccourcis">
+				<div data-raccourci="f1">Commandes</div>
+				<div data-raccourci="alt+shift+&uarr;|alt+shift+&darr;">Dupliquer lignes</div>
+				<div data-raccourci="alt+&darr;|alt+&uarr;">Déplacer lignes</div>
+				<div data-raccourci="ctrl+d">Sélec. occurrence</div>
+				<div data-raccourci="ctrl+shift+l">Sélec. toutes</div>
+				<div data-raccourci="ctrl+`">Terminal</div>
+				<div data-raccourci="ctrl+é">Commentaire</div>
+				<div data-raccourci="alt+shift+f">Formater</div>
+				<div data-raccourci="ctrl+shift+x">Suppr. lignes</div>
+				<div data-raccourci="ctrl+k s">Sauv. tout</div>
+				<div data-raccourci="ctrl+k w">Fermer tout</div>
+				<div data-raccourci="ctrl+p">Trouver fichier</div>
+
+			</div>
+		</section>
+		<section class="legende">
+			<div><kbd class="CTRL"></kbd> = <span>Ctrl</span></div>
+			<div><kbd class="SHIFT"></kbd> = <span>Maj</span></div>
+			<div><kbd class="ALT"></kbd> = <span>Alt</span> (gauche)</div>
+		</section>
+	</div>
+</body>
+
+</html>
