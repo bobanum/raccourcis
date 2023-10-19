@@ -1,4 +1,3 @@
-@import 'polices/professional-business.css';
 @import 'variables';
 @import 'boilerplate';
 @import 'interface';
@@ -7,8 +6,9 @@
 
 .flap {
 	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-rows: auto auto .7em;
+	// grid-template-columns: auto auto auto;
+	// grid-template-rows: auto auto .7em;
+	grid-template-areas: "g w v" "g f v" "l f v" ;
 	gap: .25em;
 }
 
@@ -50,7 +50,9 @@ section {
 		font-weight: smaller;
 
 		samp {
-			font-weight: bold;
+			font: inherit;
+			font-size: 80%;
+			// font-weight: bold;
 			// font-family: cursive;
 		}
 	}
@@ -95,18 +97,26 @@ section {
 }
 
 .general {
-	grid-column: 1;
-	grid-row: 1 / span 2;
+	grid-area: g;
+}
+
+.windows {
+	grid-area: w;
+	// grid-column: 1;
+	// grid-row: 1 / span 2;
 }
 
 .vscode {
-	grid-column: 3;
-	grid-row: 1 / span 3;
+	grid-area: v;
+	// grid-column: 3;
+	// grid-row: 1 / span 3;
 }
 
 .legende {
-	grid-column: 1 / 3;
+	grid-area: l;
+	// grid-column: 1 / 2;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: end;
 	border: none;
 	gap: 1em;
@@ -121,8 +131,9 @@ section {
 }
 
 .fureteur {
-	grid-column: 2;
-	grid-row: 1;
+	grid-area: f;
+	// grid-column: 2;
+	// grid-row: 1;
 }
 
 kbd {

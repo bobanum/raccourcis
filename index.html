@@ -7,13 +7,15 @@
 	<link rel="stylesheet" href="./css/style.css" />
 	<script type="module">
 		import App from "./src/App.js";
-		import Page from "https://cdn.jsdelivr.net/gh/bobanum/page@v0.0.2/src/Page.js";
+		// import Page from "https://cdn.jsdelivr.net/gh/bobanum/page@v0.0.2/src/Page.js";
+		import Page from "./page/src/Page.js";
 		Page.main({
 			orientation: "portrait",
 			format: "a4",
-			margin: ".125in",
+			margin: ".2in",
 			rows: 4,
 			columns: 2,
+			theme: "narrow",
 		});
 		App.main();
 	</script>

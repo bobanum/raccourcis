@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import 'polices/professional-business.css';
 @import url("https://cdn.jsdelivr.net/gh/bobanum/page@v0.0.2/css/font-themes/corporate.css");
 :root {
   --h: 240;
@@ -96,8 +95,7 @@ nav ul li a:hover {
 
 .flap {
   display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto 0.7em;
+  grid-template-areas: "g w v" "g f v" "l f v";
   gap: 0.25em;
 }
 
@@ -135,7 +133,8 @@ section h1 {
   font-weight: smaller;
 }
 .raccourcis .touche samp {
-  font-weight: bold;
+  font: inherit;
+  font-size: 80%;
 }
 .raccourcis .touche > *:not(:first-child, span)::before {
   content: "+";
@@ -168,18 +167,21 @@ section h1 {
 }
 
 .general {
-  grid-column: 1;
-  grid-row: 1/span 2;
+  grid-area: g;
+}
+
+.windows {
+  grid-area: w;
 }
 
 .vscode {
-  grid-column: 3;
-  grid-row: 1/span 3;
+  grid-area: v;
 }
 
 .legende {
-  grid-column: 1/3;
+  grid-area: l;
   display: flex;
+  flex-wrap: wrap;
   align-items: end;
   border: none;
   gap: 1em;
@@ -192,8 +194,7 @@ section h1 {
 }
 
 .fureteur {
-  grid-column: 2;
-  grid-row: 1;
+  grid-area: f;
 }
 
 kbd {
@@ -220,4 +221,4 @@ kbd.CMD::after {
 }
 kbd.ALT::after {
   background-image: url("../img/touches.svg#alt");
-}
+}/*# sourceMappingURL=style.css.map */
